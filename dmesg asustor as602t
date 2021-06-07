@@ -1033,3 +1033,29 @@ root@vioq:~# dmesg
 [  165.000202] IPv6: ADDRCONF(NETDEV_CHANGE): enp5s0: link becomes ready
 [  184.575525] systemd-journald[379]: File /var/log/journal/9bedd32fbd5048bf9a1f72ff00cebbbc/user-1000.journal corrupted or uncleanly shut down, renaming and replacing.
 root@vioq:~#
+
+
+
+root@vioq:~# lsblk
+NAME                      MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
+loop0                       7:0    0  55.4M  1 loop /snap/core18/1944
+loop1                       7:1    0  55.4M  1 loop /snap/core18/2066
+loop2                       7:2    0  69.9M  1 loop /snap/lxd/19188
+loop3                       7:3    0  67.6M  1 loop /snap/lxd/20326
+loop4                       7:4    0  31.1M  1 loop /snap/snapd/10707
+loop5                       7:5    0  32.1M  1 loop /snap/snapd/12057
+sda                         8:0    1  14.9G  0 disk
+├─sda1                      8:1    1   512M  0 part /boot/efi
+├─sda2                      8:2    1     1G  0 part /boot
+└─sda3                      8:3    1  13.3G  0 part
+  └─ubuntu--vg-ubuntu--lv 253:0    0  13.3G  0 lvm  /
+sdb                         8:16   0 596.2G  0 disk
+├─sdb1                      8:17   0   100M  0 part
+├─sdb2                      8:18   0   244G  0 part
+└─sdb3                      8:19   0   352G  0 part
+root@vioq:~# uname -a
+Linux vioq 5.4.0-74-generic #83-Ubuntu SMP Sat May 8 02:35:39 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+root@vioq:~# cat /etc/debian_version
+bullseye/sid
+root@vioq:~#
+
